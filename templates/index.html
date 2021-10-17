@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/themes/dark.css">
+    </head>
+    <body>
+        <form method="post">
+            <div id="sandbox-container" class="span5 col-md-5">
+                <input id="datepicker" type="text" class="form-control" name="chosen_date" value="{{ chosen_date }}">
+            </div>
+            <input type="submit" value="Download">
+        </form>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.js"></script>
+        <script id="rednered-js">
+            $("#datepicker").flatpickr({
+                altInput: true,
+                altFormat: "F j, Y",
+                dateFormat: "Y-m-d",
+            });
+        </script>
+    </body>
+</html>
